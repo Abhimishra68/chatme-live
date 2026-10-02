@@ -14,7 +14,7 @@
  * subset; see docs for the native path.
  */
 
-const CACHE = 'chatme-shell-v1';
+const CACHE = 'chatme-shell-v2';
 const SHELL = ['/', '/index.html', '/icon.svg', '/manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
