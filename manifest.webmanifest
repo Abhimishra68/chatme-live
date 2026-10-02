@@ -1,0 +1,19 @@
+{
+  "name": "Chatme — Real-Time Messaging",
+  "short_name": "Chatme",
+  "description": "Fast, real-time messaging with offline support, contact discovery, and media sharing.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0d14",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
