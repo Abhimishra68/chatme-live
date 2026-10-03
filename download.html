@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Download Chatme App — Fast, Private Real-Time Messaging</title>
+    <meta name="description" content="Download the official Chatme Android APK (4.9 MB). Fast, private real-time messaging with instant chats, voice notes, media sharing & status." />
+    <meta name="theme-color" content="#090d16" />
+
+    <!-- Open Graph for WhatsApp, Telegram, Twitter link previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Chatme" />
+    <meta property="og:title" content="Join me on Chatme 💬 (Free Android App)" />
+    <meta property="og:description" content="Fast, private real-time messaging with instant chats, voice notes & status. Tap to download the official APK." />
+    <meta property="og:image" content="chat-bg.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <link rel="apple-touch-icon" href="icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --primary: #6366f1;
+        --primary-hover: #4f46e5;
+        --accent: #06b6d4;
+        --emerald: #10b981;
+        --bg-dark: #07090e;
+        --card-bg: rgba(15, 23, 42, 0.75);
+        --card-border: rgba(255, 255, 255, 0.1);
+        --text-main: #f8fafc;
+        --text-sub: #94a3b8;
+        --text-muted: #64748b;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html, body { min-height: 100%; width: 100%; }
+
+      body {
+        font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        background:
+          radial-gradient(1000px 600px at 15% 10%, rgba(99, 102, 241, 0.22), transparent 60%),
+          radial-gradient(800px 500px at 85% 20%, rgba(6, 182, 212, 0.18), transparent 55%),
+          radial-gradient(600px 400px at 50% 90%, rgba(16, 185, 129, 0.12), transparent 60%),
+          var(--bg-dark);
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 16px;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 440px;
+        margin: auto;
+      }
+
+      .card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 28px;
+        padding: 32px 24px 28px;
+        text-align: center;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 35px rgba(99, 102, 241, 0.15);
+        animation: cardIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      @keyframes cardIn {
+        from { opacity: 0; transform: translateY(20px) scale(0.97); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      .logo-wrap {
+        position: relative;
+        width: 82px;
+        height: 82px;
+        margin: 0 auto 16px;
+      }
+
+      .logo-glow {
+        position: absolute;
+        inset: -6px;
+        border-radius: 26px;
+        background: linear-gradient(135deg, var(--primary), var(--accent));
+        opacity: 0.6;
+        filter: blur(12px);
+        animation: pulseGlow 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes pulseGlow {
+        from { opacity: 0.4; transform: scale(0.96); }
+        to { opacity: 0.75; transform: scale(1.04); }
+      }
+
+      .logo-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 24px;
+        background: linear-gradient(135deg, #4f46e5, #06b6d4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4), 0 10px 24px rgba(79, 70, 229, 0.45);
+      }
+
+      .title {
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.65rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 6px;
+        background: linear-gradient(135deg, #ffffff 60%, #cbd5e1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .subtitle {
+        color: var(--text-sub);
+        font-size: 0.92rem;
+        line-height: 1.45;
+        margin-bottom: 18px;
+      }
+
+      /* Ref Badge */
+      .ref-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        color: #34d399;
+        font-size: 0.8rem;
+        font-weight: 700;
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 16px rgba(16, 185, 129, 0.15);
+      }
+
+      /* Download Status */
+      .status-box {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        padding: 10px 14px;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-align: left;
+      }
+
+      .status-spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(6, 182, 212, 0.25);
+        border-top-color: #06b6d4;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        flex-shrink: 0;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      .status-text {
+        font-size: 0.82rem;
+        color: var(--text-sub);
+        line-height: 1.3;
+      }
+
+      .status-text b {
+        color: #38bdf8;
+      }
+
+      /* Primary Action Button */
+      .btn-download {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #6366f1, #06b6d4);
+        color: #fff;
+        font-family: 'Outfit', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: 0 10px 28px rgba(99, 102, 241, 0.45);
+        transition: all 0.2s ease;
+      }
+
+      .btn-download:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 34px rgba(99, 102, 241, 0.55);
+      }
+
+      .btn-download:active {
+        transform: translateY(1px) scale(0.98);
+      }
+
+      .btn-subinfo {
+        display: block;
+        font-size: 0.72rem;
+        color: var(--text-muted);
+        margin-top: 8px;
+      }
+
+      .btn-web {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 13px 18px;
+        margin-top: 10px;
+        background: transparent;
+        border: 1px solid var(--card-border);
+        border-radius: 14px;
+        color: var(--text-main);
+        font-size: 0.88rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.15s ease;
+      }
+
+      .btn-web:hover {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* 3-Step Installation Guide */
+      .steps-section {
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        text-align: left;
+      }
+
+      .steps-title {
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .step-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 10px 12px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .step-num {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(99, 102, 241, 0.2);
+        border: 1px solid rgba(99, 102, 241, 0.4);
+        color: #818cf8;
+        font-size: 0.72rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-top: 1px;
+      }
+
+      .step-content {
+        font-size: 0.8rem;
+        color: var(--text-sub);
+        line-height: 1.4;
+      }
+
+      .step-content b {
+        color: var(--text-main);
+      }
+
+      .safe-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 18px;
+        color: #10b981;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+
+      .safe-badge svg {
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <main class="card">
+        <!-- Logo -->
+        <div class="logo-wrap" aria-hidden="true">
+          <div class="logo-glow"></div>
+          <div class="logo-box">
+            <svg width="42" height="42" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 1.82.49 3.53 1.34 5L2 22l5.23-1.31C8.63 21.49 10.26 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" />
+            </svg>
+          </div>
+        </div>
+
+        <h1 class="title">Chatme for Android</h1>
+        <p class="subtitle">Next-gen real-time messaging with instant chats, voice notes & status updates.</p>
+
+        <!-- Referral Invitation Badge -->
+        <div class="ref-badge" id="refBadge" style="display:none">
+          <span>🎁</span>
+          <span>Invited by Friend • Code: <b id="refCodeText"></b></span>
+        </div>
+
+        <!-- Download Status Indicator -->
+        <div class="status-box" id="statusBox">
+          <div class="status-spinner" id="statusSpinner"></div>
+          <div class="status-text" id="statusText">
+            Starting automatic download... <b>Chatme-Live-v1.0.apk</b> (4.9 MB)
+          </div>
+        </div>
+
+        <!-- Big Download Button -->
+        <a class="btn-download" id="downloadBtn" href="#" rel="noopener" download="Chatme-Live-v1.0.apk">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
+          <span>Download &amp; Install APK</span>
+        </a>
+        <span class="btn-subinfo">Official Android APK • Version 1.0.0 • 4.9 MB</span>
+
+        <!-- Web Browser Alternative -->
+        <a class="btn-web" href="./index.html">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+          <span>Open Web Version (No Install)</span>
+        </a>
+
+        <!-- 3-Step Guide -->
+        <div class="steps-section">
+          <div class="steps-title">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            How to Install on Android
+          </div>
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              If Chrome shows <b>"File might be harmful"</b>, tap <b>"Download anyway"</b> (standard for all direct APK installs).
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              When download finishes, tap <b>"Open"</b> from your notification bar or Downloads folder.
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              Tap <b>"Install"</b> (enable <i>"Install unknown apps"</i> if prompted) and start chatting!
+            </div>
+          </div>
+        </div>
+
+        <!-- Safe Verified Badge -->
+        <div class="safe-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <polyline points="9 12 11 14 15 10"/>
+          </svg>
+          <span>100% Safe &amp; Verified • End-to-End Encrypted</span>
+        </div>
+      </main>
+    </div>
+
+    <!-- Hidden iframe for automatic instant download trigger -->
+    <iframe id="downloadFrame" style="display:none;" aria-hidden="true"></iframe>
+
+    <script>
+      (function () {
+        // High-speed CDN URLs
+        var PRIMARY_APK_URL = 'https://github.com/Abhimishra68/chatme-live/releases/latest/download/Chatme-Live-v1.0.apk';
+        var FALLBACK_APK_URL = './Chatme-Live-v1.0.apk';
+
+        // Extract referral code
+        var params = new URLSearchParams(window.location.search);
+        var ref = params.get('ref');
+        if (ref) {
+          try { localStorage.setItem('chatme_ref_code', ref); } catch (e) {}
+          var refBadge = document.getElementById('refBadge');
+          var refText = document.getElementById('refCodeText');
+          if (refBadge && refText) {
+            refText.textContent = ref;
+            refBadge.style.display = 'inline-flex';
+          }
+        }
+
+        var btn = document.getElementById('downloadBtn');
+        var statusBox = document.getElementById('statusBox');
+        var statusText = document.getElementById('statusText');
+        var spinner = document.getElementById('statusSpinner');
+        var frame = document.getElementById('downloadFrame');
+
+        // Set download button href
+        btn.setAttribute('href', PRIMARY_APK_URL);
+
+        function triggerApkDownload() {
+          // Attempt download via anchor click
+          var a = document.createElement('a');
+          a.href = PRIMARY_APK_URL;
+          a.setAttribute('download', 'Chatme-Live-v1.0.apk');
+          a.rel = 'noopener';
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+
+          // Also set iframe as backup trigger
+          try {
+            frame.src = PRIMARY_APK_URL;
+          } catch(e) {}
+
+          if (statusText) {
+            statusText.innerHTML = 'Downloading <b>Chatme-Live-v1.0.apk</b>... Check your phone notifications.';
+          }
+          if (spinner) {
+            spinner.style.borderTopColor = '#10b981';
+          }
+        }
+
+        btn.addEventListener('click', function (e) {
+          if (statusText) {
+            statusText.innerHTML = 'Downloading <b>Chatme-Live-v1.0.apk</b>... Check your notifications to Open.';
+          }
+        });
+
+        // Device detection
+        var ua = navigator.userAgent || '';
+        var isAndroid = /Android/i.test(ua);
+        var isIOS = /iPhone|iPad|iPod/i.test(ua);
+
+        if (isAndroid) {
+          // Immediately start downloading on Android
+          window.addEventListener('load', function () {
+            setTimeout(triggerApkDownload, 400);
+          });
+        } else if (isIOS) {
+          if (statusText) {
+            statusText.innerHTML = 'Apple iOS detected: Use the <b>Web Version</b> below to chat instantly.';
+          }
+          if (spinner) spinner.style.display = 'none';
+        } else {
+          // Desktop
+          if (statusText) {
+            statusText.innerHTML = 'Download the APK to transfer to phone, or open <b>Web Version</b> below.';
+          }
+          if (spinner) spinner.style.display = 'none';
+        }
+      })();
+    </script>
+  </body>
+</html>
