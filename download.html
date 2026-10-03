@@ -10,8 +10,8 @@
     <!-- Open Graph for WhatsApp, Telegram, Twitter link previews -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Chatme" />
-    <meta property="og:title" content="Join me on Chatme 💬 (Free Android App)" />
-    <meta property="og:description" content="Fast, private real-time messaging with instant chats, voice notes & status. Tap to download the official APK." />
+    <meta property="og:title" content="Chatme Messenger" />
+    <meta property="og:description" content="Simple. Personal. Real-time messaging and calls. Download Chatme for Android." />
     <meta property="og:image" content="chat-bg.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -335,8 +335,8 @@
 
         <!-- Referral Invitation Badge -->
         <div class="ref-badge" id="refBadge" style="display:none">
-          <span>🎁</span>
-          <span>Invited by Friend • Code: <b id="refCodeText"></b></span>
+          <span>👋</span>
+          <span>Invited by a friend to chat on Chatme</span>
         </div>
 
         <!-- Download Status Indicator -->
@@ -420,9 +420,7 @@
         if (ref) {
           try { localStorage.setItem('chatme_ref_code', ref); } catch (e) {}
           var refBadge = document.getElementById('refBadge');
-          var refText = document.getElementById('refCodeText');
-          if (refBadge && refText) {
-            refText.textContent = ref;
+          if (refBadge) {
             refBadge.style.display = 'inline-flex';
           }
         }
