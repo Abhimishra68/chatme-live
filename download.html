@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>Download Chatme App — Fast, Private Real-Time Messaging</title>
-    <meta name="description" content="Download the official Chatme Android APK (4.9 MB). Fast, private real-time messaging with instant chats, voice notes, media sharing & status." />
+    <meta name="description" content="Download the official Chatme Android APK (3.8 MB). Fast, private real-time messaging with instant chats, voice notes, media sharing & status." />
     <meta name="theme-color" content="#090d16" />
 
     <!-- Open Graph for WhatsApp, Telegram, Twitter link previews -->
@@ -410,7 +410,7 @@
           <div class="status-row">
             <div class="status-spinner" id="statusSpinner"></div>
             <div class="status-text" id="statusText">
-              Starting instant full-speed download... <b>Chatme-Live-v1.0.apk</b> (4.9 MB)
+              Starting instant full-speed download... <b>Chatme-Live-v1.0.apk</b> (3.8 MB)
             </div>
           </div>
           <div class="progress-track">
@@ -441,7 +441,7 @@
           </svg>
           <span id="btnLabel">Download &amp; Install APK</span>
         </a>
-        <span class="btn-subinfo">Official Android APK • Lightweight 4.9 MB • Ultra Fast CDN</span>
+        <span class="btn-subinfo">Official Android APK • Lightweight 3.8 MB • Ultra Fast CDN</span>
 
         <!-- Web Browser Alternative (Disabled for now - does nothing on click) -->
         <button type="button" class="btn-web" id="openWebBtn" onclick="event.preventDefault(); event.stopPropagation(); return false;">
@@ -474,7 +474,7 @@
           <div class="step-item">
             <div class="step-num">3</div>
             <div class="step-content">
-              Tap <b>"Install"</b>, open Chatme, and tap <b>"YES"</b> on the permission screen to start chatting!
+              Tap <b>"Install"</b>. If Play Protect shows <i>"Unrecognized developer"</i>, tap <b>"More details"</b> &rarr; <b>"Install anyway"</b>. Then open Chatme to start chatting!
             </div>
           </div>
         </div>
@@ -537,7 +537,7 @@
 
         function showCompletedState() {
           if (statusText) {
-            statusText.innerHTML = '⚡ Download Complete (4.9 MB)! Check notification to install.';
+            statusText.innerHTML = '⚡ Download Complete (3.8 MB)! Check notification to install.';
           }
           if (spinner) {
             spinner.style.borderTopColor = '#10b981';
@@ -573,7 +573,7 @@
           }, 300);
 
           if (statusText) {
-            statusText.innerHTML = '⚡ Downloading at full speed (4.9 MB)... Tap <b>Open</b> when finished.';
+            statusText.innerHTML = '⚡ Downloading at full speed (3.8 MB)... Tap <b>Open</b> when finished.';
           }
         }
 
@@ -583,7 +583,7 @@
           if (!isAndroid) return;
 
           // Attempt intent deep link to launch app if already installed
-          var intentUrl = 'intent://open#Intent;scheme=chatme;package=com.chatme.live;end';
+          var intentUrl = 'intent://open#Intent;scheme=chatme;package=com.chatme.app;end';
           var iframe = document.createElement('iframe');
           iframe.style.display = 'none';
           iframe.src = intentUrl;
