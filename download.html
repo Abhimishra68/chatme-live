@@ -358,15 +358,15 @@
         </a>
         <span class="btn-subinfo">Official Android APK • Version 1.0.0 • 4.9 MB</span>
 
-        <!-- Web Browser Alternative -->
-        <a class="btn-web" href="./index.html">
+        <!-- Web Browser Alternative (Disabled for now - does nothing on click) -->
+        <button type="button" class="btn-web" id="openWebBtn" onclick="event.preventDefault(); event.stopPropagation(); return false;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10" />
             <line x1="2" y1="12" x2="22" y2="12" />
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
           </svg>
           <span>Open Web Version (No Install)</span>
-        </a>
+        </button>
 
         <!-- 3-Step Guide -->
         <div class="steps-section">
