@@ -434,33 +434,44 @@
 
         <!-- High-Speed Fast Download Buttons -->
         <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
-          <!-- 32-bit Fast Button (Recommended for Realme / Redmi / Budget) -->
-          <a class="btn-download" id="download32Btn" href="./chatme-32bit.apk" download="chatme-32bit.apk" style="background: linear-gradient(135deg, #059669, #0d9488); box-shadow: 0 8px 24px rgba(13, 148, 136, 0.4);">
+          <!-- Universal Fast Button (Recommended for all devices) -->
+          <a class="btn-download" id="downloadMainBtn" href="./chatme.apk" download="chatme.apk" style="background: linear-gradient(135deg, #059669, #0d9488); box-shadow: 0 8px 24px rgba(13, 148, 136, 0.4);">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
-            <span>⚡ Fast Download (17 MB) — Realme / Redmi / Oppo</span>
+            <span>⚡ Download Chatme (Universal APK)</span>
           </a>
 
-          <!-- 64-bit Fast Button -->
-          <a class="btn-download" id="download64Btn" href="./chatme-64bit.apk" download="chatme-64bit.apk">
+          <!-- Direct Mirror -->
+          <a class="btn-download" id="downloadMirrorBtn" href="./Chatme-Live-v1.0.apk" download="Chatme-Live-v1.0.apk">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
               <line x1="12" y1="15" x2="12" y2="3" />
             </svg>
-            <span>🚀 Fast Download (19 MB) — 64-bit Phones</span>
-          </a>
-
-          <!-- Universal Fallback Button -->
-          <a href="./Chatme-Live-v1.0.apk" download="Chatme-Live-v1.0.apk" style="display: block; padding: 10px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.8rem; text-decoration: none; text-align: center;">
-            📦 Or Download Universal Edition (53 MB — All Devices)
+            <span>🚀 Direct Mirror (Chatme-Live-v1.0.apk)</span>
           </a>
         </div>
 
-        <span class="btn-subinfo" style="margin-bottom: 16px;">Direct High-Speed CDN • 100% Full Bandwidth • No Wait</span>
+        <!-- App Not Installed Alert Box -->
+        <div style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 14px; padding: 14px 16px; margin-bottom: 16px; text-align: left;">
+          <div style="display: flex; align-items: center; gap: 8px; color: #fbbf24; font-weight: 700; font-size: 0.88rem; margin-bottom: 6px;">
+            <span>⚠️</span>
+            <span>Getting "App not installed"?</span>
+          </div>
+          <div style="color: #cbd5e1; font-size: 0.82rem; line-height: 1.45;">
+            If you previously installed a test version of Chatme on your device, you <b>must completely uninstall it first</b>:
+            <ol style="margin: 6px 0 0 18px; padding-left: 2px;">
+              <li>Long press the <b>Chatme</b> icon on your home screen &rarr; tap <b>Uninstall</b>.</li>
+              <li><b>CRITICAL:</b> If a popup asks <i>"Keep app data?"</i>, <b>UNCHECK</b> the box!</li>
+              <li>Now tap the Download button above &amp; tap <b>Install</b>.</li>
+            </ol>
+          </div>
+        </div>
+
+        <span class="btn-subinfo" style="margin-bottom: 16px;">Direct High-Speed CDN • Universal Android 5.0 to 15 • No Wait</span>
 
         <!-- 3-Step Guide -->
         <div class="steps-section">
@@ -519,6 +530,8 @@
         }
 
         var openPromptBanner = document.getElementById('openPromptBanner');
+        var dMain = document.getElementById('downloadMainBtn');
+        var dMirror = document.getElementById('downloadMirrorBtn');
         var d32 = document.getElementById('download32Btn');
         var d64 = document.getElementById('download64Btn');
 
@@ -528,6 +541,8 @@
           }
         }
 
+        if (dMain) dMain.addEventListener('click', onDownloadClick);
+        if (dMirror) dMirror.addEventListener('click', onDownloadClick);
         if (d32) d32.addEventListener('click', onDownloadClick);
         if (d64) d64.addEventListener('click', onDownloadClick);
 
