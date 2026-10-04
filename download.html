@@ -488,7 +488,7 @@
           <div class="step-item">
             <div class="step-num">2</div>
             <div class="step-content">
-              Tap the <b>⚡ Fast Download (17 MB)</b> button above. It finishes in 3–5 seconds at full speed.
+              Tap the <b>⚡ Download Chatme APK (19 MB)</b> button above.
             </div>
           </div>
           <div class="step-item">
@@ -512,28 +512,32 @@
 
     <script>
       (function () {
-        // Resolve full-speed direct CDN path with zero redirects
-        var baseDir = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-        var directUrl = window.location.origin + baseDir + 'Chatme-Live-v1.0.apk';
-        var fallbackDirect = window.location.origin + baseDir + 'chatme.apk';
-        var githubReleaseUrl = 'https://github.com/Abhimishra68/chatme-live/releases/latest/download/Chatme-Live-v1.0.apk';
-
-        // Extract referral code
-        var params = new URLSearchParams(window.location.search);
-        var ref = params.get('ref');
-        if (ref) {
-          try { localStorage.setItem('chatme_ref_code', ref); } catch (e) {}
-          var refBadge = document.getElementById('refBadge');
-          if (refBadge) {
-            refBadge.style.display = 'inline-flex';
-          }
+        // Unregister any active Service Worker on this download page
+        // so the native browser download manager handles the APK directly at full speed
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function (registrations) {
+            for (var r of registrations) {
+              r.unregister();
+            }
+          }).catch(function () {});
         }
+
+        // Extract referral code if present in the link
+        try {
+          var params = new URLSearchParams(window.location.search);
+          var ref = params.get('ref');
+          if (ref) {
+            localStorage.setItem('chatme_ref_code', ref);
+            var refBadge = document.getElementById('refBadge');
+            if (refBadge) {
+              refBadge.style.display = 'inline-flex';
+            }
+          }
+        } catch (e) {}
 
         var openPromptBanner = document.getElementById('openPromptBanner');
         var dMain = document.getElementById('downloadMainBtn');
         var dMirror = document.getElementById('downloadMirrorBtn');
-        var d32 = document.getElementById('download32Btn');
-        var d64 = document.getElementById('download64Btn');
 
         function onDownloadClick() {
           if (openPromptBanner) {
@@ -543,26 +547,6 @@
 
         if (dMain) dMain.addEventListener('click', onDownloadClick);
         if (dMirror) dMirror.addEventListener('click', onDownloadClick);
-        if (d32) d32.addEventListener('click', onDownloadClick);
-        if (d64) d64.addEventListener('click', onDownloadClick);
-
-        // Try to automatically launch app if already installed on phone
-        function tryLaunchInstalledApp() {
-          var isAndroid = /Android/i.test(navigator.userAgent || '');
-          if (!isAndroid) return;
-          var intentUrl = 'intent://open#Intent;scheme=chatme;package=com.chatme.messenger;end';
-          var iframe = document.createElement('iframe');
-          iframe.style.display = 'none';
-          iframe.src = intentUrl;
-          document.body.appendChild(iframe);
-          setTimeout(function () {
-            iframe.remove();
-          }, 500);
-        }
-
-        window.addEventListener('load', function () {
-          tryLaunchInstalledApp();
-        });
       })();
     </script>
   </body>

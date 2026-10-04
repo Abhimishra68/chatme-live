@@ -35,6 +35,8 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
+  const url = new URL(req.url);
+
   // Never cache API / realtime / storage calls — always go to network.
   if (url.origin !== self.location.origin) return;
 
