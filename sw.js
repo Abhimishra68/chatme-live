@@ -14,7 +14,7 @@
  * subset; see docs for the native path.
  */
 
-const CACHE = 'chatme-shell-v3';
+const CACHE = 'chatme-shell-v4';
 const SHELL = ['/', '/index.html', '/icon.svg', '/manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
@@ -35,9 +35,11 @@ self.addEventListener('fetch', (event) => {
   const req = event.request;
   if (req.method !== 'GET') return;
 
-  const url = new URL(req.url);
   // Never cache API / realtime / storage calls — always go to network.
   if (url.origin !== self.location.origin) return;
+
+  // Never intercept or cache APK files — let native browser download manager handle at full wire speed
+  if (url.pathname.endsWith('.apk')) return;
 
   if (req.mode === 'navigate') {
     event.respondWith(

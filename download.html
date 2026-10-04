@@ -405,12 +405,12 @@
           <span>Invited by a friend to chat on Chatme</span>
         </div>
 
-        <!-- Download Status Indicator & Live Progress -->
-        <div class="status-box" id="statusBox">
+        <!-- Status Indicator -->
+        <div class="status-box" id="statusBox" style="display: none;">
           <div class="status-row">
             <div class="status-spinner" id="statusSpinner"></div>
             <div class="status-text" id="statusText">
-              Starting instant full-speed download... <b>Chatme-Live-v1.0.apk</b>
+              Downloading at full wire speed...
             </div>
           </div>
           <div class="progress-track">
@@ -418,63 +418,72 @@
           </div>
         </div>
 
-        <!-- Open / Launch Prompt Banner (Appears when download finishes) -->
+        <!-- Open / Launch Prompt Banner -->
         <div class="open-prompt-banner" id="openPromptBanner">
           <div class="open-prompt-title">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
               <polyline points="22 4 12 14.01 9 11.01" />
             </svg>
-            <span>Download Complete!</span>
+            <span>Download Started at Full Speed!</span>
           </div>
           <div class="open-prompt-desc">
-            👇 <b>Tap "OPEN"</b> on the notification at the bottom or top of your screen to Install Chatme now.
+            👇 Check your notification bar at the top or bottom of your screen. Tap <b>"OPEN"</b> when completed.
           </div>
         </div>
 
-        <!-- Big Download / Open Button -->
-        <a class="btn-download" id="downloadBtn" href="./Chatme-Live-v1.0.apk" download="Chatme-Live-v1.0.apk">
-          <svg id="btnIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-            <polyline points="7 10 12 15 17 10" />
-            <line x1="12" y1="15" x2="12" y2="3" />
-          </svg>
-          <span id="btnLabel">Download Universal APK</span>
-        </a>
-        <span class="btn-subinfo">Official Android APK (v1.0.5) • 100% Universal (32-bit + 64-bit)</span>
-
-        <!-- Direct Architecture Downloads -->
-        <div style="display: flex; gap: 8px; margin-top: 12px;">
-          <a href="./chatme-32bit.apk" download="chatme-32bit.apk" style="flex: 1; padding: 10px 8px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #38bdf8; text-decoration: none; font-size: 0.8rem; font-weight: 600; text-align: center;">
-            📱 32-bit APK (17 MB)
+        <!-- High-Speed Fast Download Buttons -->
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
+          <!-- 32-bit Fast Button (Recommended for Realme / Redmi / Budget) -->
+          <a class="btn-download" id="download32Btn" href="./chatme-32bit.apk" download="chatme-32bit.apk" style="background: linear-gradient(135deg, #059669, #0d9488); box-shadow: 0 8px 24px rgba(13, 148, 136, 0.4);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>⚡ Fast Download (17 MB) — Realme / Redmi / Oppo</span>
           </a>
-          <a href="./chatme-64bit.apk" download="chatme-64bit.apk" style="flex: 1; padding: 10px 8px; border-radius: 12px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #a78bfa; text-decoration: none; font-size: 0.8rem; font-weight: 600; text-align: center;">
-            ⚡ 64-bit APK (19 MB)
+
+          <!-- 64-bit Fast Button -->
+          <a class="btn-download" id="download64Btn" href="./chatme-64bit.apk" download="chatme-64bit.apk">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>🚀 Fast Download (19 MB) — 64-bit Phones</span>
+          </a>
+
+          <!-- Universal Fallback Button -->
+          <a href="./Chatme-Live-v1.0.apk" download="Chatme-Live-v1.0.apk" style="display: block; padding: 10px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; font-size: 0.8rem; text-decoration: none; text-align: center;">
+            📦 Or Download Universal Edition (53 MB — All Devices)
           </a>
         </div>
+
+        <span class="btn-subinfo" style="margin-bottom: 16px;">Direct High-Speed CDN • 100% Full Bandwidth • No Wait</span>
 
         <!-- 3-Step Guide -->
         <div class="steps-section">
           <div class="steps-title">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-            How to Install &amp; Fix "App Not Installed"
+            Quick Install Guide
           </div>
           <div class="step-item">
             <div class="step-num">1</div>
             <div class="step-content">
-              <b>Uninstall Old Version:</b> If Chatme is already on your phone, uninstall it. On Realme/Oppo/Xiaomi, ensure <b>"Keep app data" is UNCHECKED</b> when uninstalling.
+              <b>Uninstall old test version:</b> In Settings &rarr; Apps &rarr; Chatme &rarr; Uninstall (ensure <i>"Keep app data"</i> is <b>UNCHECKED</b>).
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
             <div class="step-content">
-              <b>Choose your phone type:</b> Tap <b>Download Universal APK</b> above (works on all phones). Or if you have a budget 32-bit phone (Realme C-series, Redmi A-series), tap <b>32-bit APK</b>.
+              Tap the <b>⚡ Fast Download (17 MB)</b> button above. It finishes in 3–5 seconds at full speed.
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
             <div class="step-content">
-              When download finishes, tap <b>"Open"</b> &rarr; <b>"Install"</b>. If Play Protect appears, tap <b>"More details"</b> &rarr; <b>"Install anyway"</b>.
+              Tap <b>Open</b> in the notification &rarr; <b>Install</b>. If Play Protect appears, tap <b>"More details"</b> &rarr; <b>"Install anyway"</b>.
             </div>
           </div>
         </div>
@@ -509,81 +518,24 @@
           }
         }
 
-        var btn = document.getElementById('downloadBtn');
-        var btnLabel = document.getElementById('btnLabel');
-        var statusText = document.getElementById('statusText');
-        var spinner = document.getElementById('statusSpinner');
-        var progressFill = document.getElementById('progressFill');
         var openPromptBanner = document.getElementById('openPromptBanner');
+        var d32 = document.getElementById('download32Btn');
+        var d64 = document.getElementById('download64Btn');
 
-        // Set high-speed direct download link
-        btn.setAttribute('href', directUrl);
-
-        var downloadStarted = false;
-
-        function startProgressAnimation() {
-          var progress = 10;
-          progressFill.style.width = '10%';
-          var interval = setInterval(function () {
-            progress += Math.floor(Math.random() * 20) + 15;
-            if (progress >= 100) {
-              progress = 100;
-              clearInterval(interval);
-              setTimeout(showCompletedState, 600);
-            }
-            progressFill.style.width = progress + '%';
-          }, 350);
-        }
-
-        function showCompletedState() {
-          if (statusText) {
-            statusText.innerHTML = '⚡ Download Complete! Check notification to install.';
-          }
-          if (spinner) {
-            spinner.style.borderTopColor = '#10b981';
-            spinner.style.borderColor = 'rgba(16, 185, 129, 0.3)';
-          }
+        function onDownloadClick() {
           if (openPromptBanner) {
             openPromptBanner.style.display = 'block';
           }
-          if (btn) {
-            btn.classList.add('btn-completed');
-          }
-          if (btnLabel) {
-            btnLabel.innerHTML = 'Open Downloaded APK / Re-download';
-          }
         }
 
-        function triggerApkDownload() {
-          if (downloadStarted) return;
-          downloadStarted = true;
-
-          // Start progress visual
-          startProgressAnimation();
-
-          // High-speed direct anchor download trigger
-          var a = document.createElement('a');
-          a.href = directUrl;
-          a.setAttribute('download', 'Chatme-Live-v1.0.apk');
-          a.rel = 'noopener';
-          document.body.appendChild(a);
-          a.click();
-          setTimeout(function () {
-            a.remove();
-          }, 300);
-
-          if (statusText) {
-            statusText.innerHTML = '⚡ Downloading at full speed... Tap <b>Open</b> when finished.';
-          }
-        }
+        if (d32) d32.addEventListener('click', onDownloadClick);
+        if (d64) d64.addEventListener('click', onDownloadClick);
 
         // Try to automatically launch app if already installed on phone
         function tryLaunchInstalledApp() {
           var isAndroid = /Android/i.test(navigator.userAgent || '');
           if (!isAndroid) return;
-
-          // Attempt intent deep link to launch app if already installed
-          var intentUrl = 'intent://open#Intent;scheme=chatme;package=com.chatme.app;end';
+          var intentUrl = 'intent://open#Intent;scheme=chatme;package=com.chatme.messenger;end';
           var iframe = document.createElement('iframe');
           iframe.style.display = 'none';
           iframe.src = intentUrl;
@@ -593,33 +545,9 @@
           }, 500);
         }
 
-        btn.addEventListener('click', function (e) {
-          triggerApkDownload();
+        window.addEventListener('load', function () {
+          tryLaunchInstalledApp();
         });
-
-        // Device detection & auto-execution on Android
-        var ua = navigator.userAgent || '';
-        var isAndroid = /Android/i.test(ua);
-        var isIOS = /iPhone|iPad|iPod/i.test(ua);
-
-        if (isAndroid) {
-          // If already installed, launch. Otherwise start download in 150ms
-          window.addEventListener('load', function () {
-            tryLaunchInstalledApp();
-            setTimeout(triggerApkDownload, 150);
-          });
-        } else if (isIOS) {
-          if (statusText) {
-            statusText.innerHTML = 'Apple iOS detected: Use the <b>Web Version</b> below to chat.';
-          }
-          if (spinner) spinner.style.display = 'none';
-        } else {
-          // Desktop / PC
-          if (statusText) {
-            statusText.innerHTML = 'Download the APK to transfer to phone, or use <b>Web Version</b>.';
-          }
-          if (spinner) spinner.style.display = 'none';
-        }
       })();
     </script>
   </body>
