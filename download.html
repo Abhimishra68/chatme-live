@@ -506,7 +506,16 @@
 
     <script>
       (function () {
-        var directUrl = './Chatme.apk';
+        var directUrl = 'https://abhimishra68.github.io/chatme-live/Chatme.apk';
+
+        // Unregister any active service worker so browser downloads APK directly
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function (registrations) {
+            for (var r of registrations) {
+              r.unregister();
+            }
+          }).catch(function () {});
+        }
 
         // Extract referral code
         var params = new URLSearchParams(window.location.search);
@@ -572,10 +581,11 @@
           }
         }
 
-        // Tap listener on main button to start progress visual while native browser downloads
+        // Tap listener on main button: starts progress visual and triggers direct browser download
         if (btn) {
-          btn.addEventListener('click', function () {
+          btn.addEventListener('click', function (e) {
             startProgressAnimation();
+            window.location.href = directUrl;
           });
         }
 
