@@ -410,7 +410,7 @@
           <div class="status-row">
             <div class="status-spinner" id="statusSpinner"></div>
             <div class="status-text" id="statusText">
-              Starting instant full-speed download... <b>Chatme-v1.1.9.apk</b> (28 MB)
+              Starting instant full-speed download... <b>Chatme.apk</b> (Latest v1.2.3 • 29 MB)
             </div>
           </div>
           <div class="progress-track">
@@ -433,7 +433,7 @@
         </div>
 
         <!-- Big Download / Open Button -->
-        <a class="btn-download" id="downloadBtn" href="https://github.com/Abhimishra68/chatme-live/releases/download/v1.0.0/Chatme-Live-v1.0.apk" download="Chatme-v1.1.9.apk">
+        <a class="btn-download" id="downloadBtn" href="./Chatme.apk" download="Chatme.apk">
           <svg id="btnIcon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
             <polyline points="7 10 12 15 17 10" />
@@ -441,7 +441,7 @@
           </svg>
           <span id="btnLabel">Download &amp; Install APK</span>
         </a>
-        <span class="btn-subinfo">Official Android APK • Lightweight 28 MB • Ultra Fast CDN</span>
+        <span class="btn-subinfo">Official Android APK • Latest v1.2.3 • Direct Download</span>
 
         <!-- Web Browser Alternative (Disabled for now - does nothing on click) -->
         <button type="button" class="btn-web" id="openWebBtn" onclick="event.preventDefault(); event.stopPropagation(); return false;">
@@ -503,9 +503,9 @@
       (function () {
         // Resolve full-speed direct CDN path with zero redirects
         var baseDir = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
-        var directUrl = 'https://github.com/Abhimishra68/chatme-live/releases/download/v1.0.0/Chatme-Live-v1.0.apk';
-        var fallbackDirect = 'https://github.com/Abhimishra68/chatme-live/releases/download/v1.0.0/Chatme-Live-v1.0.apk';
-        var githubReleaseUrl = 'https://github.com/Abhimishra68/chatme-live/releases/download/v1.0.0/Chatme-Live-v1.0.apk';
+        var directUrl = './Chatme.apk';
+        var fallbackDirect = 'https://abhimishra68.github.io/chatme-live/Chatme.apk';
+        var githubReleaseUrl = 'https://abhimishra68.github.io/chatme-live/Chatme.apk';
 
         // Extract referral code
         var params = new URLSearchParams(window.location.search);
@@ -534,7 +534,7 @@
           var progress = 15;
           progressFill.style.width = '15%';
           if (statusText) {
-            statusText.innerHTML = '⚡ Downloading (28.6 MB)... Check your notification bar and wait for it to finish.';
+            statusText.innerHTML = '⚡ Downloading (29 MB)... Check your notification bar and wait for it to finish.';
           }
           var interval = setInterval(function () {
             progress += 10;
@@ -575,7 +575,7 @@
           // High-speed direct anchor download trigger
           var a = document.createElement('a');
           a.href = directUrl;
-          a.setAttribute('download', 'Chatme-v1.1.9.apk');
+          a.setAttribute('download', 'Chatme.apk');
           a.rel = 'noopener';
           document.body.appendChild(a);
           a.click();
